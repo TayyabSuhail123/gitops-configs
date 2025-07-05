@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/TayyabSuhail123/gitops-configs
     targetRevision: HEAD
-    path: apps/dev/nginx
+    path: apps/nginx-dev
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
