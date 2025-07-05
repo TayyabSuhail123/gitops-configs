@@ -8,10 +8,10 @@ spec:
   source:
     repoURL: https://github.com/TayyabSuhail123/gitops-configs
     targetRevision: HEAD
-    path: argocd
+    path: apps
   destination:
     server: https://kubernetes.default.svc
-    namespace: apps
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
