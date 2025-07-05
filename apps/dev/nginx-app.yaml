@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-app
+  name: nginx-dev
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/TayyabSuhail123/gitops-configs
     targetRevision: HEAD
-    path: argocd
+    path: apps/dev/nginx
   destination:
     server: https://kubernetes.default.svc
-    namespace: apps
+    namespace: dev
   syncPolicy:
     automated:
       prune: true
