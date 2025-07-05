@@ -1,0 +1,14 @@
+server:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - argocd.example.com
+    https: false
+    annotations:
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+  service:
+    port: 80
+  extraArgs:
+    - --insecure
