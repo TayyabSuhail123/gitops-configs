@@ -1,0 +1,11 @@
+server:
+  service:
+    type: LoadBalancer
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - argocd.local
+    tls: []
+  extraArgs:
+    - --insecure
