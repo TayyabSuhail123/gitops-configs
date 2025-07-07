@@ -19,13 +19,14 @@ This repository demonstrates a full GitOps setup using **ArgoCD**, **HashiCorp V
 ```
 gitops-configs/
 ├── apps/
+│   └── nginx-dev.yaml
 │   ├── dev/
 │   │   └── nginx/
 │   │       ├── deployment.yaml
 │   │       └── external-secret.yaml
 │   ├── prod/
 │   └── staging/
-│       └── nginx-dev.yaml
+│  
 ├── argocd/
 │   ├── app-of-apps.yaml
 │   └── argocd-values.yaml
