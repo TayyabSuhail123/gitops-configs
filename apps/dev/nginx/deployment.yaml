@@ -19,3 +19,12 @@ spec:
           image: nginx:alpine
           ports:
             - containerPort: 80
+          volumeMounts:
+            - name: secret-vol
+              mountPath: /etc/secrets
+              readOnly: true
+      volumes:
+        - name: secret-vol
+          secret:
+            secretName: dev-app-config
+
